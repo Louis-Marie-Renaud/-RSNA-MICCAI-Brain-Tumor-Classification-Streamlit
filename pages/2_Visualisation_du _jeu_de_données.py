@@ -54,7 +54,7 @@ with presentation_container:
     pytorch_presentation1, pytorch_presentation2 = st.columns([4, 4])    
     
     with pytorch_presentation1:
-        st.subheader('Utilisation de la bibliothèque PyTorch')
+        st.subheader('Utilisation de la bibliothèque mateuszbuda_brain-segmentation-pytorch_unet')
         """
         Afin d'exploiter les capacités 3D pour la segmentation cérébrale, nous utiliserons le modèle U-Net pour l'IRM cérébrale et la classe RadiomicsShape3D.
 
@@ -62,8 +62,8 @@ with presentation_container:
 
         La segmentation cérébrale est une tâche cruciale en imagerie médicale car elle permet l'extraction d'informations précises sur différentes régions ou classes au sein des structures cérébrales. Une segmentation précise joue un rôle vital dans diverses applications médicales, notamment la détection de tumeurs, l'analyse anatomique et la planification du traitement.
 
-        Nous avons utilisé, afin de générer un dataset à partir de nos fichiers au format DCM, une bibilothèque Python. La bibliothèque "mateuszbuda_brain-segmentation-pytorch_unet" a été choisie pour faciliter la segmentation cérébrale à partir d'images médicales. Il s'agit notamment de données géométriques sur la forme de la tumeur, par exemple la variable MaximumDiameter, ou des données de texture de la tumeur, par exemple avec Contrast.
-        Nous pouvons observer les premières lignes de notre dataframe généré avec PyTorch. Celui-ci contient un grand nombre de variables.
+        Nous avons utilisé, afin de générer un dataset à partir de nos fichiers au format DCM, une bibliothèque Python. La bibliothèque "mateuszbuda_brain-segmentation-pytorch_unet" a été choisie pour faciliter la segmentation cérébrale à partir d'images médicales. Il s'agit notamment de données géométriques sur la forme de la tumeur, par exemple la variable MaximumDiameter, ou des données de texture de la tumeur, par exemple avec Contrast.
+        Nous pouvons observer les premières lignes de notre dataframe généré. Celui-ci contient un grand nombre de variables.
 
         En incorporant le modèle U-Net 3D pour l'IRM cérébrale et la classe RadiomicsShape3D, nous avons étendu les capacités de notre projet à l'analyse d'images volumétriques du cerveau. Cela permet une segmentation plus complète et une analyse de forme, facilitant larecherche médicale avancée et les applications cliniques.
         Initialement, nous avons travaillé avec des données 2D, où nous avons uniquement pris en compte la coupe centrale des images. Cependant, compte tenu de la taille de notre ensemble de données et des limites de la visualisation 2D pour fournir une compréhension complète de la structure cérébrale, il semblait approprié de passer à une approche 3D. En travaillant avec des volumes d'images 3D, nous avons pu enrichir nos données et obtenir une représentation plus complète des caractéristiques du cerveau. Cette transition vers le 3D offre de nouvelles perspectives pour une analyse plus détaillée et des résultats plus précis.
