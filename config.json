@@ -1,0 +1,626 @@
+[
+    {
+      "config": {
+        "defaultAggregated": false,
+        "geoms": [
+          "auto"
+        ],
+        "coordSystem": "generic",
+        "limit": -1
+      },
+      "encodings": {
+        "dimensions": [
+          {
+            "dragId": "gw_4piU",
+            "fid": "GW_2BH3H2FK6DQB2J0PQNK",
+            "name": "MGMT_value",
+            "basename": "MGMT_value",
+            "semanticType": "ordinal",
+            "analyticType": "dimension"
+          },
+          {
+            "dragId": "gw_mea_key_fid",
+            "fid": "gw_mea_key_fid",
+            "name": "Measure names",
+            "analyticType": "dimension",
+            "semanticType": "nominal"
+          }
+        ],
+        "measures": [
+          {
+            "dragId": "gw_CdLO",
+            "fid": "GW_KBUECW",
+            "name": "ID",
+            "basename": "ID",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_vnKz",
+            "fid": "GW_GII5336AC2PAWHVK6UCW",
+            "name": "MeshSurface",
+            "basename": "MeshSurface",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_ePaF",
+            "fid": "GW_3E0B45ZTEI4C6EMCRISSVK",
+            "name": "PixelSurface",
+            "basename": "PixelSurface",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_fCeG",
+            "fid": "GW_C7N2LFA91EVW9AX4G",
+            "name": "Perimeter",
+            "basename": "Perimeter",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_JNYM",
+            "fid": "GW_2LT0G0GFGYQTBPS3LJPTMJB137H05DI9E7N4",
+            "name": "PerimeterSurfaceRatio",
+            "basename": "PerimeterSurfaceRatio",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_w_FK",
+            "fid": "GW_2I4NR7YMVOO9T9GPYK0",
+            "name": "Sphericity",
+            "basename": "Sphericity",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_b2Px",
+            "fid": "GW_J8B73BOYE1EHOSLXGF4QCXAQRKEXIE81Q4QWG",
+            "name": "SphericalDisproportion",
+            "basename": "SphericalDisproportion",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_ShmA",
+            "fid": "GW_WKRO39PV6HKKBSGQDPLYR7A90W",
+            "name": "MaximumDiameter",
+            "basename": "MaximumDiameter",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_pchN",
+            "fid": "GW_WKRJWGVDKS1E4OOHW6AOYVV19S",
+            "name": "MajorAxisLength",
+            "basename": "MajorAxisLength",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_qbnp",
+            "fid": "GW_4KZIYZM0LSHQD394DICFFV0HC",
+            "name": "MinorAxisLenth",
+            "basename": "MinorAxisLenth",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_Ktn1",
+            "fid": "GW_22ZN7AX5YCTDS93UIB4",
+            "name": "Elongation",
+            "basename": "Elongation",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_5dV0",
+            "fid": "GW_RK2Y4B16U3DQVZ9WICRPNQ2RSG",
+            "name": "Autocorrelation",
+            "basename": "Autocorrelation",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_IUMK",
+            "fid": "GW_13VDD27VAK1TOIOLSYKSCASDT8W8J4",
+            "name": "ClusterProminence",
+            "basename": "ClusterProminence",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_YvgZ",
+            "fid": "GW_2UAUPPHQWMSZA5E6M63OZ4",
+            "name": "ClusterShade",
+            "basename": "ClusterShade",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_L4Tw",
+            "fid": "GW_SDUZRRR0VCZ14D4OW3E5089640",
+            "name": "ClusterTendency",
+            "basename": "ClusterTendency",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_S3xu",
+            "fid": "GW_1FUVCZ098SY603E8",
+            "name": "Contrast",
+            "basename": "Contrast",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_5DJ8",
+            "fid": "GW_EDZO6YVLGDAWMD7KJNSG",
+            "name": "Correlation",
+            "basename": "Correlation",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_TSD7",
+            "fid": "GW_14GELQ8AV570OG3QN3LETOCHVWMXIO",
+            "name": "DifferenceAverage",
+            "basename": "DifferenceAverage",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_dq0D",
+            "fid": "GW_14GELQ8AV570OG3QNJ1NVATLUT4PIO",
+            "name": "DifferenceEntropy",
+            "basename": "DifferenceEntropy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_JfvB",
+            "fid": "GW_7ZONUIJ19GXWTUILWCNQ8AXBYUZLFZK",
+            "name": "DifferenceVariance",
+            "basename": "DifferenceVariance",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_tRTI",
+            "fid": "GW_KD3CJ4",
+            "name": "Id",
+            "basename": "Id",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_243G",
+            "fid": "GW_40T4D168",
+            "name": "Idm",
+            "basename": "Idm",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_zu6Z",
+            "fid": "GW_SLR319O34",
+            "name": "Idmn",
+            "basename": "Idmn",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_1OYe",
+            "fid": "GW_40T4EFQO",
+            "name": "Idn",
+            "basename": "Idn",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_tGb-",
+            "fid": "GW_SM8RH0JE8",
+            "name": "Imc1",
+            "basename": "Imc1",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw__-fE",
+            "fid": "GW_SM8RH1XYO",
+            "name": "Imc2",
+            "basename": "Imc2",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_VhUY",
+            "fid": "GW_UWWX5RX6P6HHY6MNUPIU7QFODS",
+            "name": "InverseVariance",
+            "basename": "InverseVariance",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_AXyq",
+            "fid": "GW_34XUA5FTWXYAEGW2C75U7K",
+            "name": "JointAverage",
+            "basename": "JointAverage",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_OkGX",
+            "fid": "GW_FVRBJW1E973P3RCK3QY8",
+            "name": "JointEnergy",
+            "basename": "JointEnergy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_gA27",
+            "fid": "GW_34XUA5FTXDEJG3D6B3NM7K",
+            "name": "JointEntropy",
+            "basename": "JointEntropy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_ek8L",
+            "fid": "GW_48G1JNLC",
+            "name": "MCC",
+            "basename": "MCC",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_TE6B",
+            "fid": "GW_91EGI7T1J2SGHJMPCBQ4G5X4NB1367K",
+            "name": "MaximumProbability",
+            "basename": "MaximumProbability",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_A2T_",
+            "fid": "GW_2I5F79VHEDNRI4N3GVK",
+            "name": "SumAverage",
+            "basename": "SumAverage",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_ujrb",
+            "fid": "GW_2I5F7AAXNFA8M3JL8VK",
+            "name": "SumEntropy",
+            "basename": "SumEntropy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_30kP",
+            "fid": "GW_2I5F7BTHE2SNSFA2RSG",
+            "name": "SumSquares",
+            "basename": "SumSquares",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw__Mvi",
+            "fid": "GW_22MTB1PBUPAG3RGBX5U240",
+            "name": "10Percentile",
+            "basename": "10Percentile",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_LMYI",
+            "fid": "GW_2ERSLQ8BIBKVJPTIH5L0KW",
+            "name": "90Percentile",
+            "basename": "90Percentile",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_PG7Y",
+            "fid": "GW_120E0F7WY8UNK",
+            "name": "Energy",
+            "basename": "Energy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_CTW6",
+            "fid": "GW_7IASSKUZBNXYCW",
+            "name": "Entropy",
+            "basename": "Entropy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_oq3N",
+            "fid": "GW_8KSL5TVM0RONHPEH0EYPFY16AK46WQ8",
+            "name": "InterquartileRange",
+            "basename": "InterquartileRange",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_JLtj",
+            "fid": "GW_1M0ZQO8ZQLU0PRG0",
+            "name": "Kurtosis",
+            "basename": "Kurtosis",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_ptfl",
+            "fid": "GW_8D8W06Z3TRKW8G",
+            "name": "Maximum",
+            "basename": "Maximum",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_7bKn",
+            "fid": "GW_2IAZK2Q4C6SF1PZLF9RNRXV6QDGBYITG1JXS",
+            "name": "MeanAbsoluteDeviation",
+            "basename": "MeanAbsoluteDeviation",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_ZFgj",
+            "fid": "GW_U5XEDUS6O",
+            "name": "Mean",
+            "basename": "Mean",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_VxfO",
+            "fid": "GW_16DD4BWBLY88G",
+            "name": "Median",
+            "basename": "Median",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_J_0P",
+            "fid": "GW_8DD8WJIFBSTVZK",
+            "name": "Minimum",
+            "basename": "Minimum",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_tGWg",
+            "fid": "GW_6CBHIJSO6K0",
+            "name": "Range",
+            "basename": "Range",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_s7zR",
+            "fid": "GW_7EKSK8L6NU4XRXAWVQ3L0ME36WGDPE6SV7RTSHPX4JJ1S",
+            "name": "RobustMeanAbsoluteDeviation",
+            "basename": "RobustMeanAbsoluteDeviation",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_bcEj",
+            "fid": "GW_YPDHAAAY69JEKDDYBWWLIA5YCW",
+            "name": "RootMeanSquared",
+            "basename": "RootMeanSquared",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_NvEI",
+            "fid": "GW_1S5DKOFYYTL3M2WG",
+            "name": "Skewness",
+            "basename": "Skewness",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_rrj7",
+            "fid": "GW_I0KMTSLNQYOLCKLB3V3K",
+            "name": "TotalEnergy",
+            "basename": "TotalEnergy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_t83X",
+            "fid": "GW_2KA4O8YDCXNDULQAGC0",
+            "name": "Uniformity",
+            "basename": "Uniformity",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_060H",
+            "fid": "GW_1UFCP8YB3QQ3KAWG",
+            "name": "Variance",
+            "basename": "Variance",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_count_fid",
+            "fid": "gw_count_fid",
+            "name": "Row count",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum",
+            "computed": true,
+            "expression": {
+              "op": "one",
+              "params": [],
+              "as": "gw_count_fid"
+            }
+          },
+          {
+            "dragId": "gw_mea_val_fid",
+            "fid": "gw_mea_val_fid",
+            "name": "Measure values",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          }
+        ],
+        "rows": [
+          {
+            "dragId": "gw_6OpH",
+            "fid": "GW_34XUA5FTXDEJG3D6B3NM7K",
+            "name": "JointEntropy",
+            "basename": "JointEntropy",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_zAjU",
+            "fid": "GW_48G1JNLC",
+            "name": "MCC",
+            "basename": "MCC",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          }
+        ],
+        "columns": [
+          {
+            "dragId": "gw_bJ5X",
+            "fid": "GW_WKRJWGVDKS1E4OOHW6AOYVV19S",
+            "name": "MajorAxisLength",
+            "basename": "MajorAxisLength",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          },
+          {
+            "dragId": "gw_bUYA",
+            "fid": "GW_2I4NR7YMVOO9T9GPYK0",
+            "name": "Sphericity",
+            "basename": "Sphericity",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          }
+        ],
+        "color": [
+          {
+            "dragId": "gw_UHun",
+            "fid": "GW_2BH3H2FK6DQB2J0PQNK",
+            "name": "MGMT_value",
+            "basename": "MGMT_value",
+            "semanticType": "ordinal",
+            "analyticType": "dimension"
+          }
+        ],
+        "opacity": [],
+        "size": [],
+        "shape": [
+          {
+            "dragId": "gw_hcKF",
+            "fid": "GW_2BH3H2FK6DQB2J0PQNK",
+            "name": "MGMT_value",
+            "basename": "MGMT_value",
+            "semanticType": "ordinal",
+            "analyticType": "dimension"
+          }
+        ],
+        "radius": [],
+        "theta": [],
+        "longitude": [],
+        "latitude": [],
+        "geoId": [],
+        "details": [],
+        "filters": [],
+        "text": []
+      },
+      "layout": {
+        "showActions": false,
+        "showTableSummary": false,
+        "stack": "stack",
+        "interactiveScale": false,
+        "zeroScale": true,
+        "size": {
+          "mode": "auto",
+          "width": 320,
+          "height": 200
+        },
+        "format": {},
+        "geoKey": "name",
+        "resolve": {
+          "x": false,
+          "y": false,
+          "color": false,
+          "opacity": false,
+          "shape": false,
+          "size": false
+        }
+      },
+      "visId": "gw_NOlo",
+      "name": "Chart 1"
+    }
+  ]
