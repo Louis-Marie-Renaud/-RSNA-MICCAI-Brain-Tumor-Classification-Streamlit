@@ -87,7 +87,7 @@ with cnn_intro_container:
 
     st.markdown('#')
 
-    st.image("./images/1_cnn.gif", use_column_width=True, caption='Votre GIF en Streamlit')
+    st.image("./images/1_cnn.gif", use_column_width=True, caption='Reseau CNN')
 
 
 with cnn_intro_container:
@@ -99,18 +99,23 @@ with cnn_intro_container:
 
     st.markdown('#')
 
-    architecture_col1, architecture_col2 = st.columns([3,5])
+    st.image("./images/2_cnn.gif", use_column_width=False, caption='Convolution')
 
-    with architecture_col1:
-        st.image("./images/architecture.png")
 
-    with architecture_col2:
-        st.subheader("Architecture du modèle : DeepScanModel")
-        """
-        ● Le modèle est un Réseau de Neurones Convolutionnels (CNN) 3D conçu spécifiquement pour traiter des séquences d'images médicales.
 
-        ● Il prend quatre canaux correspondant à quatre séquences d'images, les concatène et les traite pour effectuer une classification binaire.
-        """
+
+with cnn_intro_container:
+    st.header("ReLU")
+
+    """
+    Après la convolution, la fonction ReLU est appliquée pour introduire une non-linéarité, aidant le réseau à apprendre des motifs plus complexes.
+    """
+
+    st.markdown('#')
+
+    st.image("./images/3_cnn.gif", use_column_width=True, caption='ReLU')
+
+
 
 st.markdown('##')
 
