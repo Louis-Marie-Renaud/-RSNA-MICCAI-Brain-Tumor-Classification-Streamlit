@@ -105,6 +105,18 @@ with cnn_intro_container:
 
 
 with cnn_intro_container:
+    st.header("Intermediate Layer")
+
+    """
+    Cette couche intermédiaire montre la transition du pooling à la convolution. Après le pooling, une convolution est appliquée pour extraire des caractéristiques plus abstraites à partir des informations réduites.
+    """
+
+    st.markdown('#')
+
+    st.image("./images/5_cnn.gif", use_column_width=True, caption='Intermediate Layer')
+
+
+with cnn_intro_container:
     st.header("ReLU")
 
     """
@@ -114,6 +126,42 @@ with cnn_intro_container:
     st.markdown('#')
 
     st.image("./images/3_cnn.gif", use_column_width=True, caption='ReLU')
+
+
+with cnn_intro_container:
+    st.header("Pooling (Pooling spatial)")
+
+    """
+    Le pooling est utilisé pour réduire la dimension spatiale de la représentation, tout en préservant les caractéristiques importantes.
+    """
+
+    st.markdown('#')
+
+    st.image("./images/4_cnn.gif", use_column_width=True, caption='Pooling')
+
+with cnn_intro_container:
+    st.header("Dropout")
+
+    """
+    La couche de Dropout est ajoutée pour régulariser le modèle en désactivant aléatoirement certains neurones pendant l'entraînement, empêchant ainsi le surapprentissage.
+    """
+
+
+
+with cnn_intro_container:
+    st.header("Fully Connected")
+
+    """
+    Enfin, les couches entièrement connectées sont utilisées pour combiner les caractéristiques extraites et effectuer la classification.
+    """
+
+    st.markdown('#')
+
+    st.image("./images/6_cnn.gif", use_column_width=True, caption='Pooling')
+
+
+
+
 
 
 
