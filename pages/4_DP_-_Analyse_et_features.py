@@ -105,6 +105,7 @@ with data_preprocesing_container:
 
     with dl_crossed_validation2:
         st.image("./images/crossed_validation.png")
+        st.image("./images/8_cnn.gif", use_column_width=True, caption='Coupe')
 
     st.markdown('#')
 
