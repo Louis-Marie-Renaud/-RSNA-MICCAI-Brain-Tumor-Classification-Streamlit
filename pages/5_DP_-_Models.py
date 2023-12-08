@@ -16,7 +16,6 @@ from imblearn.over_sampling import RandomOverSampler
 from sklearn.model_selection import KFold
 from tensorflow.keras.utils import to_categorical
 
-from PIL import Image, ImageDraw
 st.set_page_config(
     page_title='Prédictions modèle Deep Learning',
     layout='wide'
@@ -78,30 +77,7 @@ with cnn_intro_container:
 
         ● Il prend quatre canaux correspondant à quatre séquences d'images, les concatène et les traite pour effectuer une classification binaire.
         """
-        image = Image.open("./images/7_cnn.gif")
-        # Obtenir les dimensions de l'image
-        width, height = image.size
-
-        # Créer une nouvelle image avec un fond transparent
-        new_image = Image.new("RGBA", image.size, (0, 0, 0, 0))
-
-        # Copier l'image originale sur la nouvelle image
-        new_image.paste(image, (0, 0))
-
-        # Créer un objet draw pour dessiner sur l'image
-        draw = ImageDraw.Draw(new_image)
-
-        # Définir les coordonnées du coin inférieur droit
-        bottom_right = (width - 500, height - 500)
-
-        # Définir la taille du carré noir
-        square_size = 50
-
-        # Dessiner un carré noir au-dessus du gif en bas à droite
-        draw.rectangle([bottom_right[0] - square_size, bottom_right[1] - square_size, bottom_right[0], bottom_right[1]], fill=(0, 0, 0, 255))
-
-        st.image(new_image, use_column_width=True, caption='3D CNN avec carré noir ajouté')
-
+        st.image("./images/7_cnn.gif", use_column_width=True, caption='3D CNN')
 
 
 with cnn_intro_container:
