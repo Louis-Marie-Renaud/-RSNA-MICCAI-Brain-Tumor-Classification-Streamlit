@@ -73,8 +73,9 @@ with intro_container:
 
     st.header('Présentation de notre projet Brain Tumor')
     st.subheader('Glioblastome et méthylation du promoteur MGMT')
-    """
-    Le glioblastome est le type de cancer cérébral le plus agressif et le plus commun chez l'adulte. Il pose aujourd'hui de grande difficultés pour son diagnostic et son traitement. La méthylation du promoteur MGMT a été identifiée comme signe de réponse à la chimiothérapie dans le cadre du traitement pour le glioblastome.
+    
+    st.write("Le [glioblastome](https://www.braintumour.ca/fr/types_de_tumeurs_cerebrales/glioblastome/) est le type de cancer cérébral le plus agressif et le plus commun chez l'adulte.")
+    """Il pose aujourd'hui de grande difficultés pour son diagnostic et son traitement. La méthylation du promoteur MGMT a été identifiée comme signe de réponse à la chimiothérapie dans le cadre du traitement pour le glioblastome.
     Sa détection requiert cependant des opérations et procédures lourdes pour le patient.
     Ce projet a pour objectif d'aider à détecter la méthylation du promoteur MGMT à partir d'IRM. Nous avions à notre disposition une base de données avec, pour un ensemble de patients, des fichiers DCM correspondant aux IRM mettant en évidence les tumeurs cérébrales, ainsi qu'un fichier CSV nous indiquant si pour chacun des patients, il y avait ou non méthylation du promoteur MGMT. Les fichiers DCM sont des fichiers standards dans le domaine de l'imagerie médicale. 
     Nous avons dans un premier temps voulu comprendre ce qu'était le glioblastome et méthylation du promoteur MGMT, comment cela pouvait se traduire sur des IRM, et comment passer d'un ensemble de fichiers d'imagerie médicale à un dataset que nous pouvions utiliser pour entraîner nos modèles de prédiction.
@@ -109,20 +110,22 @@ with tumor_presentation_container:
     
     with col_tumor_presentation4:
         st.subheader('Méthylation du promoteur MGMT')
-        """
-        La Méthylguanine-DNA Méthyltransférase, abrégée MGMT, est une enzyme cruciale dans le mécanisme de réparation de l'ADN au sein des cellules. Son rôle est de protéger l'intégrité du matériel génétique en éliminant les groupes méthyles de l'ADN. Les groupes méthyles, lorsqu'ils s'attachent à des sites spécifiques de l'ADN, peuvent causer des mutations et des dommages à l'ADN, ce qui peut éventuellement conduire à la formation de tumeurs.
         
-        En utilisant des données IRM, il est possible de détecter des caractéristiques spécifiques dans les tumeurs cérébrales qui peuvent être associées au statut de la MGMT, ce qui peut orienter les décisions cliniques.
-        La présence ou l'absence de MGMT dans une tumeur cérébrale a des implications directes sur les choix de traitement. Les tumeurs cérébrales qui expriment activement la MGMT ont tendance à être résistantes à la témozolomide, ce qui rend le traitement moins efficace. En revanche, les tumeurs cérébrales qui présentent une faible expression ou une absence de MGMT sont plus sensibles à la témozolomide, ce qui peut améliorer les perspectives de traitement et de survie pour les patients.
+        st.write("La Méthylguanine-DNA Méthyltransférase, abrégée [MGMT](https://oncologypro.esmo.org/education-library/factsheets-on-biomarkers/mgmt-promoter-methylation-in-glioma), est une enzyme cruciale dans le mécanisme de réparation de l'ADN au sein des cellules.") 
+        st.write("Son rôle est de protéger l'intégrité du matériel génétique en éliminant les [groupes méthyles de l'ADN](https://curie.fr/actualite/epigenetique-et-genetique/lart-de-la-methylation). Les groupes méthyles, lorsqu'ils s'attachent à des sites spécifiques de l'ADN, peuvent causer des mutations et des dommages à l'ADN, ce qui peut éventuellement conduire à la formation de tumeurs.")
         """
+        En utilisant des données IRM, il est possible de détecter des caractéristiques spécifiques dans les tumeurs cérébrales qui peuvent être associées au statut de la MGMT, ce qui peut orienter les décisions cliniques.
+        """
+        st.write("La présence ou l'absence de MGMT dans une tumeur cérébrale a des implications directes sur les choix de traitement. Les tumeurs cérébrales qui expriment activement la MGMT ont tendance à être résistantes à la [témozolomide](https://fr.wikipedia.org/wiki/T%C3%A9mozolomide), ce qui rend le traitement moins efficace. En revanche, les tumeurs cérébrales qui présentent une faible expression ou une absence de MGMT sont plus sensibles à la témozolomide, ce qui peut améliorer les perspectives de traitement et de survie pour les patients.")
+        
 
     st.markdown('##')
 
 with irm_container:
     st.subheader('IRM à disposition pour le projet')
-    """
-    L'IRM, ou Imagerie par Résonance Magnétique, est réalisée à l'aide d'un appareil en forme de cylindre équipé d'un aimant très puissant. Cet aimant génère des ondes radio projetées sur le cerveau pour créer des images en coupe. Ces images sont ensuite assemblées par un ordinateur pour obtenir une représentation précise du cerveau. Pendant l'examen, un produit de contraste est souvent injecté dans une veine du bras pour mettre en évidence certains aspects du cerveau, tels que les vaisseaux sanguins, ce qui facilite l'interprétation des images. 
     
+    st.write("L'IRM, ou [Imagerie par Résonance Magnétique](https://www.arcagy.org/infocancer/en-savoir-plus/imagerie-medicale/l-imagerie-en-resonnance-magnetique.html), est réalisée à l'aide d'un appareil en forme de cylindre équipé d'un aimant très puissant. Cet aimant génère des ondes radio projetées sur le cerveau pour créer des images en coupe. Ces images sont ensuite assemblées par un ordinateur pour obtenir une représentation précise du cerveau. Pendant l'examen, un produit de contraste est souvent injecté dans une veine du bras pour mettre en évidence certains aspects du cerveau, tels que les vaisseaux sanguins, ce qui facilite l'interprétation des images.") 
+    """
     Nous avions à notre disposition un ensemble d'IRM  pour chaque patient. Ces IRM représente l'ensemble du cerveau du patient par coupes en 2D. Nous avions des IRM correspondant à quatre modalités : FLAIR, T1w, T2 et T1wCE. Ces modalités sont utilisées en imagerie médicale pour mettre en évidence une zone spécifique d'une tumeur par exemple. 
     """
     st.markdown('#')
