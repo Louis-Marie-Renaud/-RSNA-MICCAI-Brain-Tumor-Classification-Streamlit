@@ -27,9 +27,7 @@ with header_container:
 	# for example a logo or a image that looks like a website header
     col1, col2, col3 = st.columns([2,4,2])
 
-    st.title("Streamlit Projet Brain Tumor")
-    st.header("Bienvenue dans notre Streamlit de présentation de notre projet de datascience !")
-    st.write("Le menu à gauche de l'écran vous permettra de naviguer sur les différentes parties de notre projet")
+    st.title("Machine Learning analyse et features")
 
     with col1:
         st.write("")
@@ -39,7 +37,7 @@ with header_container:
 
     with col3:
         st.write("")
-	
+
 st.markdown('#')
 
 with presentation_container:
@@ -51,10 +49,10 @@ with presentation_container:
     """
     st.markdown('##')
 
-    pytorch_presentation1, pytorch_presentation2 = st.columns([4, 4])    
-    
+    pytorch_presentation1, pytorch_presentation2 = st.columns([4, 4])
+
     with pytorch_presentation1:
-        st.subheader('Utilisation de la bibliothèque mateuszbuda_brain-segmentation-pytorch_unet')
+        st.subheader('Utilisation de la bibliothèque U-Net for brain MRI')
         """
         Afin d'exploiter les capacités 3D pour la segmentation cérébrale, nous utiliserons le modèle U-Net pour l'IRM cérébrale et la classe RadiomicsShape3D.
 
@@ -67,7 +65,7 @@ with presentation_container:
 
         En incorporant le modèle U-Net 3D pour l'IRM cérébrale et la classe RadiomicsShape3D, nous avons étendu les capacités de notre projet à l'analyse d'images volumétriques du cerveau. Cela permet une segmentation plus complète et une analyse de forme, facilitant larecherche médicale avancée et les applications cliniques.
         Initialement, nous avons travaillé avec des données 2D, où nous avons uniquement pris en compte la coupe centrale des images. Cependant, compte tenu de la taille de notre ensemble de données et des limites de la visualisation 2D pour fournir une compréhension complète de la structure cérébrale, il semblait approprié de passer à une approche 3D. En travaillant avec des volumes d'images 3D, nous avons pu enrichir nos données et obtenir une représentation plus complète des caractéristiques du cerveau. Cette transition vers le 3D offre de nouvelles perspectives pour une analyse plus détaillée et des résultats plus précis.
-        
+
         Ainsi, en exploitant le modèle U-Net 3D et la classe RadiomicsShape3D, nous sommes en mesure de tirer pleinement parti des avantages offerts par l'analyse d'images volumétriques.
         """
 
@@ -79,7 +77,7 @@ with presentation_container:
     st.markdown('##')
 
 
-    @st.cache_data 
+    @st.cache_data
     def get_station_rides(mgmt_value):
         subset = data[data['MGMT_value']==mgmt_value]
 
@@ -155,9 +153,9 @@ with variable_selection_container:
     st.subheader('Conclusion')
     """
     Nous avons supprimé certaines variables dont les valeurs semblaient aberrantes. Notre analyse a également montré qu'il existait des variables fortement corrélées entre elles. Nous avons déterminé qu'à partir d'un certain seuil, ces variables pouvaient être considérées comme redondantes, et nous n'en avons gardé qu'une seule par groupe. Enfin, certaines variables, notamment liées à la taille du cerveau de fournissaient aucune information sur une possible corrélation avec notre variable cible.
-    Nous avons donc pu réaliser une première étape du prétraitement des données, et supprimant un certain nombre de variables inutiles ou redondantes. 
+    Nous avons donc pu réaliser une première étape du prétraitement des données, et supprimant un certain nombre de variables inutiles ou redondantes.
     """
-    
+
 st.markdown('##')
 
 with correlation_container:
@@ -173,7 +171,7 @@ with correlation_container:
     # Display PyGWalker
     df = pd.read_csv("datasets/2d_rsna_miccai_brain_tumor_brain_segmentation_pytorch_unet.csv")
     pyg_html = pyg.walk(df, return_html=True, spec="config.json")
-    
+
     # Embed the HTML into the Streamlit app
     components.html(pyg_html, height=1000, scrolling=True)
 
@@ -181,7 +179,7 @@ with correlation_container:
 
     st.subheader('Conclusion')
     """
-    L'analyse univariée et bivariée de nos données ne nous a pas permis d'identifier de manière évidente une corrélation entre nos variables et la variable cible. Nous devons donc sélectionner les variables les plus significatives. 
+    L'analyse univariée et bivariée de nos données ne nous a pas permis d'identifier de manière évidente une corrélation entre nos variables et la variable cible. Nous devons donc sélectionner les variables les plus significatives.
 
     Au vu de notre quantité limité de données, nous allons avoir recours à des méthodes d'augmentation de nos données pour l'apprentissage de nos modèles de Machine Learning et de Deep Learning.
     """

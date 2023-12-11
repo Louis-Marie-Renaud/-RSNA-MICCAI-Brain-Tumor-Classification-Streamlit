@@ -40,9 +40,7 @@ with header_container:
 	# for example a logo or a image that looks like a website header
     col1, col2, col3 = st.columns([2,4,2])
 
-    st.title("Streamlit Projet Brain Tumor")
-    st.header("Bienvenue dans notre Streamlit de présentation de notre projet de datascience !")
-    st.write("Le menu à gauche de l'écran vous permettra de naviguer sur les différentes parties de notre projet")
+    st.title("Deep Learning Models")
 
     with col1:
         st.write("")

@@ -48,9 +48,7 @@ with header_container:
 	# for example a logo or a image that looks like a website header
     col1, col2, col3 = st.columns([2,4,2])
 
-    st.title("Streamlit Projet Brain Tumor")
-    st.header("Bienvenue dans notre Streamlit de présentation de notre projet de datascience !")
-    st.write("Le menu à gauche de l'écran vous permettra de naviguer sur les différentes parties de notre projet")
+    st.title("Machine Learning Models")
 
     with col1:
         st.write("")
@@ -63,7 +61,7 @@ with header_container:
 
 
 with stats_container:
-    
+
     st.header('Prédictions avec des algorithmes de Machine learning')
     """
     Nous avons testé différents algorithmes de machine learning pour essayer de réaliser des prédictions. Notre ensemble de données d'entraînement se compose de 585 patients, ce qui est relativement limité pour l'apprentissage automatique. Un ensemble de données plus important fournirait des résultats plus robustes.
@@ -71,7 +69,7 @@ with stats_container:
     """
 
 
-   #RFE RANDOM FOREST 
+   #RFE RANDOM FOREST
 
     st.subheader('Premier modèle : random forest classifier')
     """
@@ -86,7 +84,7 @@ with stats_container:
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=123)
 
     pipeline_steps = []
-    
+
     preprocessing_name = "preprocessing"
     transformers = []
     transformers.append((f"ze_a_transformer", RobustScaler(), feature_outliers))
@@ -95,22 +93,22 @@ with stats_container:
     preprocessor = ColumnTransformer(transformers)
     pipeline_steps.append((preprocessing_name, preprocessor))
 
-    
+
     n_estimators = sel_col.select_slider(
         'Veuillez choisir la valeur de n_estimators',
         options=[50, 100, 200],
         key="n_estimators_rf")
-    
+
     max_samples = sel_col.select_slider(
         'Veuillez choisir la valeur de max_samples',
         options=[0.5, 0.8, 1.0],
         key="max_samples_rf")
-    
+
     max_features = sel_col.select_slider(
         'Veuillez choisir la valeur de max_features',
         options=[0.5, 0.8, 1.0],
         key="max_features_rf")
-    
+
     max_depth = sel_col.select_slider(
         'Veuillez choisir la valeur de max_depth',
         options=[None, 5, 10],
@@ -120,7 +118,7 @@ with stats_container:
         'Veuillez choisir la valeur de min_samples_split',
         options=[2, 5, 10],
         key="min_samples_split_rf")
-    
+
     min_samples_leaf = sel_col.select_slider(
         'Veuillez choisir la valeur de min_samples_leaf',
         options=[1, 2, 4],
@@ -153,7 +151,7 @@ with stats_container:
     dis_col.write(recall_score(y_test, y_pred))
 
 
-    #PCA RANDOM FOREST 
+    #PCA RANDOM FOREST
 
     st.markdown('#')
 
@@ -176,22 +174,22 @@ with stats_container:
     X = pca.fit_transform(features_pca)
 
     X_train_pca, X_test_pca, y_train_pca, y_test_pca = train_test_split(X, target_pca, test_size=0.2, random_state=42)
-    
+
     n_estimators_pca = sel_col.select_slider(
         'Veuillez choisir la valeur de n_estimators',
         options=[50, 100, 200],
         key="n_estimators_pca")
-    
+
     max_samples_pca = sel_col.select_slider(
         'Veuillez choisir la valeur de max_samples',
         options=[0.5, 0.8, 1.0],
         key="max_samples_pca")
-    
+
     max_features_pca = sel_col.select_slider(
         'Veuillez choisir la valeur de max_features',
         options=[0.5, 0.8, 1.0],
         key="max_features_pca")
-    
+
     max_depth_pca = sel_col.select_slider(
         'Veuillez choisir la valeur de max_depth',
         options=[3, 5, 7,20],
@@ -201,7 +199,7 @@ with stats_container:
         'Veuillez choisir la valeur de min_samples_split',
         options=[2, 5, 10],
         key="min_samples_split_pca")
-    
+
     min_samples_leaf_pca = sel_col.select_slider(
         'Veuillez choisir la valeur de min_samples_leaf',
         options=[1, 2, 4],
@@ -212,7 +210,7 @@ with stats_container:
     random_forest_model_pca.fit(X_train_pca, y_train_pca)
 
     y_pred_pca = random_forest_model_pca.predict(X_test_pca)
-    
+
     dis_col.subheader("La précision de notre modèle est :")
     dis_col.write(accuracy_score(y_test_pca, y_pred_pca))
 
@@ -229,7 +227,7 @@ with stats_container:
     dis_col.write(recall_score(y_test_pca, y_pred_pca))
 
 
-    #PCA LOGISTIC REGRESSION 
+    #PCA LOGISTIC REGRESSION
 
     st.markdown('#')
 
@@ -244,7 +242,7 @@ with stats_container:
         'Veuillez choisir la valeur de penalty',
         options=[None, 'l2'],
         key="penalty")
-    
+
     c_param = sel_col.select_slider(
         'Veuillez choisir la valeur de C',
         options=[0.001,0.01,0.1, 1.0, 10.0],
@@ -255,7 +253,7 @@ with stats_container:
     logistic_regression_model_pca.fit(X_train_pca, y_train_pca)
 
     y_pred_pca_lr = logistic_regression_model_pca.predict(X_test_pca)
-    
+
     dis_col.subheader("La précision de notre modèle est :")
     dis_col.write(accuracy_score(y_test_pca, y_pred_pca_lr))
 
@@ -280,7 +278,7 @@ with conclusion_container:
     """
     Tous les modèles ont une précision similaire, mais ils diffèrent en termes de rappel.
     Tous les modèles ont des scores de précision similaires, mais diffèrent par leur score de rappel. La Régression Logistique a un rappel élevé, mais cela se fait au détriment d'une précision plus faible. Les deux autres modèles ont un rappel de 1.0, ce qui signifie qu'ils identifient bien la classe positive, mais la précision est légèrement inférieure, ce qui signifie que le modèle ne manque aucun cas positif, mais cela se fait au détriment d'une précision plus faible.
-    
+
     L'ensemble de données pourrait nécessiter un rééquilibrage ou d'autres techniques de gestion des données pour améliorer les performances du modèle, car il semble que le modèle soit biaisé vers la classe majoritaire.
     Le modèle Random Forest a tendance à sur-ajuster les données d'entraînement, ce
     qui se reflète dans une performance moins bonne sur l'ensemble de test.
