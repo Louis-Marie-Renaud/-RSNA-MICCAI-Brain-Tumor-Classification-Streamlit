@@ -59,6 +59,34 @@ with cnn_intro_container:
     Dans le contexte de notre projet initial, nous avons adopté l'approche d'Uni-net en utilisant des IRM pour détecter la présence de la MGMT.
     Cependant, en raison de résultats non concluants lors de cette première tentative, nous avons décidé d'explorer d'autres solutions pour améliorer nos performances. Cette démarche nous a conduits à l'utilisation de réseaux de neurones convolutionnels (CNN).
     """
+    training_col1, training_col2 = st.columns([5,3])
+
+    with training_col1:
+        st.subheader("Entraînement de notre modèle")
+        """
+        ● Taille du Lot (Batch Size) :
+        L'entraînement se fait par lots de 8 images à la fois (4 modalitées * 8), une limitation imposée par Kaggle.
+
+        ● Époques :
+        Le modèle est entraîné pendant 32 époques.
+
+        ● Optimiseur :
+        Type : Descente de Gradient Stochastique (SGD);
+        Explication : La Descente de Gradient Stochastique (SGD) ajuste de manière itérative les poids du modèle en utilisant les gradients calculés à partir des données d'entraînement pour minimiser la perte.
+
+        ● Configuration :
+        Taux d'Apprentissage : Un taux d'apprentissage de 0,001 permet d'atteindre un équilibre entre la vitesse de convergence et la stabilité.
+
+        ● Optimisation l’apprentissage :
+        Nous avons utiliser un Learning Rate Scheduler qui augmente progressivement la cadence d’apprentissage pour éviter les risques de divergence en début d’apprentissage.
+        Ainsi qu'une successions d'échauffements et diminutions du taux d'apprentissage pour la phase de recherche et d'exploration dans la descente du gradient.
+
+        Ansi que des callback Callbacks bestmodel, EarlyStopping
+        """
+
+    with training_col2:
+        st.image("./images/training_dl_2.png")
+
 
     st.markdown('#')
 

@@ -138,26 +138,3 @@ with data_preprocesing_container:
         """
 
     st.markdown('#')
-
-    training_col1, training_col2 = st.columns([5,3])
-
-    with training_col1:
-        st.subheader("Entraînement de notre modèle")
-        """
-        ● Taille du Lot (Batch Size) :
-        L'entraînement se fait par lots de 8 images à la fois, une limitation imposée par Kaggle.
-
-        ● Époques :
-        Le modèle est entraîné pendant 32 époques.
-
-        ● Optimiseur :
-        Type : Descente de Gradient Stochastique (SGD);
-        Explication : La Descente de Gradient Stochastique (SGD) ajuste de manière itérative les poids du modèle en utilisant les gradients calculés à partir des données d'entraînement pour minimiser la perte.
-
-        ● Configuration :
-        Taux d'Apprentissage : Un taux d'apprentissage de 0,001 permet d'atteindre un équilibre entre la vitesse de convergence et la stabilité.
-
-        """
-
-    with training_col2:
-        st.image("./images/training_dl_2.png")
