@@ -65,7 +65,7 @@ with cnn_intro_container:
         st.subheader("Entraînement de notre modèle")
         """
         ● Taille du Lot (Batch Size) :
-        L'entraînement se fait par lots de 8 images à la fois (4 modalitées * 8), une limitation imposée par Kaggle.
+        L'entraînement se fait par lots de 32 images (16 - Centre - 16) avec 4 modélatées, par batch de 8 une limitation de Kaggle.
 
         ● Époques :
         Le modèle est entraîné pendant 32 époques.
