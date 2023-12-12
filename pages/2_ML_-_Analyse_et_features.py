@@ -15,8 +15,9 @@ st.set_page_config(
 
 header_container = st.container()
 presentation_container = st.container()
-variable_selection_container = st.container()
 correlation_container = st.container()
+variable_selection_container = st.container()
+
 
 data = pd.read_csv('datasets/dataset_df.csv')
 corr_df = data.corr()
@@ -89,7 +90,46 @@ with presentation_container:
     subset = get_station_rides(selected_station)
     st.dataframe(subset)
 
-st.markdown('#')
+st.markdown('##')
+
+with correlation_container:
+    st.header("Analyse univariée et bivariée")
+
+    st.subheader('Manipulation du jeu de données avec PygWalker')
+    """
+    Nous pouvons visualiser dans cette partie la répartition de nos deux classes d'individus pour chacune de nos variables explicatives.
+    Grâce à la bibliothèque PygWalker, nous pouvons sélectionner les variables dont nous voulons étudier les effectifs selon la variable cible. Nous pouvons également sélectionner un ensemble de variables pour en étudier les corrélations.
+    Nous pouvons également sélectionner un ensemble de variables pour en étudier les corrélations.
+    """
+
+    # Display PyGWalker
+    df = pd.read_csv("datasets/2d_rsna_miccai_brain_tumor_brain_segmentation_pytorch_unet.csv")
+    #pyg_html = pyg.walk(df, return_html=True, spec="config.json")
+
+    # Embed the HTML into the Streamlit app
+    #components.html(pyg_html, height=1000, scrolling=True)
+
+    st.markdown('#')
+
+    st.subheader('Conclusion')
+    """
+    L'analyse univariée et bivariée de nos données ne nous a pas permis d'identifier de manière évidente une corrélation entre nos variables et la variable cible. Nous devons donc sélectionner les variables les plus significatives.
+
+    Au vu de notre quantité limité de données, nous allons avoir recours à des méthodes d'augmentation de nos données pour l'apprentissage de nos modèles de Machine Learning et de Deep Learning.
+    """
+
+
+
+
+
+
+
+
+
+
+
+
+st.markdown('###')
 
 with variable_selection_container:
     st.header('Sélection de variables')
@@ -154,32 +194,4 @@ with variable_selection_container:
     """
     Nous avons supprimé certaines variables dont les valeurs semblaient aberrantes. Notre analyse a également montré qu'il existait des variables fortement corrélées entre elles. Nous avons déterminé qu'à partir d'un certain seuil, ces variables pouvaient être considérées comme redondantes, et nous n'en avons gardé qu'une seule par groupe. Enfin, certaines variables, notamment liées à la taille du cerveau de fournissaient aucune information sur une possible corrélation avec notre variable cible.
     Nous avons donc pu réaliser une première étape du prétraitement des données, et supprimant un certain nombre de variables inutiles ou redondantes.
-    """
-
-st.markdown('##')
-
-with correlation_container:
-    st.header("Analyse univariée et bivariée")
-
-    st.subheader('Manipulation du jeu de données avec PygWalker')
-    """
-    Nous pouvons visualiser dans cette partie la répartition de nos deux classes d'individus pour chacune de nos variables explicatives.
-    Grâce à la bibliothèque PygWalker, nous pouvons sélectionner les variables dont nous voulons étudier les effectifs selon la variable cible. Nous pouvons également sélectionner un ensemble de variables pour en étudier les corrélations.
-    Nous pouvons également sélectionner un ensemble de variables pour en étudier les corrélations.
-    """
-
-    # Display PyGWalker
-    df = pd.read_csv("datasets/2d_rsna_miccai_brain_tumor_brain_segmentation_pytorch_unet.csv")
-    pyg_html = pyg.walk(df, return_html=True, spec="config.json")
-
-    # Embed the HTML into the Streamlit app
-    components.html(pyg_html, height=1000, scrolling=True)
-
-    st.markdown('#')
-
-    st.subheader('Conclusion')
-    """
-    L'analyse univariée et bivariée de nos données ne nous a pas permis d'identifier de manière évidente une corrélation entre nos variables et la variable cible. Nous devons donc sélectionner les variables les plus significatives.
-
-    Au vu de notre quantité limité de données, nous allons avoir recours à des méthodes d'augmentation de nos données pour l'apprentissage de nos modèles de Machine Learning et de Deep Learning.
     """
