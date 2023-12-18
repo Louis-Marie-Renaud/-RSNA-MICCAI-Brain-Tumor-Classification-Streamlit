@@ -29,7 +29,7 @@ tumor_presentation_container = st.container()
 irm_container = st.container()
 
 def int_part_file_name(file_name):
-    m = re.search(r'\d+\.png', file_name)
+    m = re.search(r'\d+\.jpg', file_name)
     file_number = m.group(0)
     file_number = re.search(r'\d+', file_number)
     file_number = int(file_number.group(0))
